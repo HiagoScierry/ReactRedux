@@ -15,8 +15,11 @@ function CourseList() {
 
 
     function addCourse(){
-        dispatch(addCourseAction(value))
-        setValue('')
+        if(value !== ''){
+            dispatch(addCourseAction(value))
+            setValue('')
+
+        }
     }
 
     return (
